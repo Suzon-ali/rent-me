@@ -1,0 +1,15 @@
+.active {
+    outline: 1px solid #23be0a;
+    color: #23be0a;
+  }
+  
+  .top-bottom{
+    animation: top-to-bottom ;
+    animation-duration: 0.8s;
+    transition: all 1s;
+  }
+  
+  @keyframes top-to-bottom {
+    from {left: -100dvw;}
+    to{left: 0;}
+  }
