@@ -8,13 +8,15 @@ const AppartMentDetails = () => {
   const { id } = useParams();
   const appartMentId = parseFloat(id);
 
-  const appartMent = appartments.find((book) => book.id === appartMentId);
+  const appartment = appartments.find((book) => book.id === appartMentId);
+
+  console.log(appartment)
 
   //decide what to render
 
   let content = "";
 
-  if (!appartMent) {
+  if (!appartment) {
     content = (
       <>
         <ErrorPage message={"The book is not availabe"} />
@@ -23,7 +25,7 @@ const AppartMentDetails = () => {
   } else {
     content = (
       <>
-        <AppartMentDetail appartMent={appartMent} />
+        <AppartMentDetail appartment={appartment} />
       </>
     );
   }

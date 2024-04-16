@@ -11,8 +11,9 @@ function AppartMent({ appartment }) {
           <h2 className="text-lg font-semibold mb-2">{appartment.appartment_title}</h2>
           <p className="text-gray-600 mb-2 font-bold">{appartment.price}</p>
           <p className="text-gray-600 mb-2">{appartment.area}</p>
-          <p className="text-gray-600 mb-4">{appartment.location}</p>
-          <Link to={`/appartment/${appartment.id}`} className="bg-success/80 text-white px-4 py-2 rounded-md hover:bg-success focus:outline-none focus:bg-success">View Property</Link>
+          <p className="text-gray-600 mb-4">Location: {appartment.location}</p>
+          <Link  to={`/appartment/${appartment.id}`} className="bg-success/80 text-white text-nowrap px-4 py-2 rounded-md hover:bg-success focus:outline-none focus:bg-success">View Property</Link>
+          
         </div>
       </div>
     </div>
