@@ -1,8 +1,13 @@
+import Banner from "../components/Banner/Banner"
+import RoomsAndAppartMents from "../components/RoomsAppertMent/RoomsAndAppartMents"
 
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+    <Banner />
+    <RoomsAndAppartMents />
+    </>
   )
 }
 

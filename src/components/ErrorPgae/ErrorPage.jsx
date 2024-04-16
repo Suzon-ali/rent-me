@@ -2,9 +2,10 @@
 import { Link } from "react-router-dom";
 import './ErrorPage.css'
 
+// eslint-disable-next-line react/prop-types
 const ErrorPage = ({message}) => {
   return (
-    <section className="page_404">
+    <section className="page_404 mt-20">
       <div className="container">
         <div className="row">
           <div className="col-sm-12 ">

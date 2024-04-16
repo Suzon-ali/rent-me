@@ -9,12 +9,8 @@ const navitems = [
     url: "/",
   },
   {
-    name: "Listed Books",
-    url: "/listed-books",
-  },
-  {
-    name: "Pages to Read",
-    url: "/pages-to-read",
+    name: "Gallery",
+    url: "/gallery",
   },
   {
     name: "About Us",
@@ -38,7 +34,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar fixed w-full top-0 left-0 py-4 px-2 font_worksans max-h-20 bg-white z-10">
+    <div className=" bg-[#1c1c1c] fixed w-full top-0 left-0 py-4 px-2 font_worksans max-h-20 z-10">
       <div className="flex justify-between items-center max-w-[1170px] mx-auto">
         <div className="logo flex items-center font-bold text-2xl text-nowrap">
           <div onClick={handelMenu} className="lg:hidden mr-2">
@@ -48,31 +44,32 @@ const Navbar = () => {
               height="25"
               viewBox="0 0 25 25"
               fill="none"
+              
             >
               <path
                 d="M17.5493 10.7632H3.54932"
-                stroke="black"
+                stroke="white"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
                 d="M21.5493 6.76318H3.54932"
-                stroke="black"
+                stroke="white"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
                 d="M21.5493 14.7632H3.54932"
-                stroke="black"
+                stroke="white"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
                 d="M17.5493 18.7632H3.54932"
-                stroke="black"
+                stroke="white"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -80,13 +77,13 @@ const Navbar = () => {
             </svg>
           </div>
           <Link to={"/"}>
-            <div><img className="w-24" src={logo} alt="" /></div>
+            <div><img className="w-24 select-none" src={logo} alt="" /></div>
           </Link>
         </div>
         <div
           className={`${
             !isMenuOpen && "hidden  lg:block"
-          } absolute lg:static left-0 top-16 bg-white w-full lg:w-auto py-2 top-bottom`}
+          } absolute lg:static left-0 top-[70px] bg-[#1c1c1c] lg:bg-transparent w-full lg:w-auto py-2 top-bottom text-white`}
         >
           <ul className="flex flex-col lg:flex-row gap-4 items-center">
             {navitems &&

@@ -1,6 +1,8 @@
 .active {
     outline: 1px solid #23be0a;
     color: #23be0a;
+    background-color: #23be0a;
+    color: white;
   }
   
   .top-bottom{

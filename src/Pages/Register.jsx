@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Register() {
   const [name, setName] = useState('');
@@ -12,8 +13,8 @@ function Register() {
   };
 
   return (
-    <div className="flex justify-center items-center h-auto pt-10">
-      <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-lg">
+    <div className="flex justify-center items-center h-auto pt-10 mt-24">
+      <div className="w-full max-w-md bg-white p-8 rounded-lg border border-gray-300">
         <h2 className="text-2xl font-semibold text-gray-800 mb-8">Register</h2>
         <form onSubmit={handleRegister}>
           <div className="mb-4">
@@ -34,7 +35,7 @@ function Register() {
           </div>
           <div className="flex justify-between items-center mb-4">
             <button type="submit" className="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600">Register</button>
-            <a href="#" className="text-indigo-500 hover:text-indigo-700">Already have an account?</a>
+            <Link to="/login" className="text-indigo-500 hover:text-indigo-700">Already have an account?</Link>
           </div>
         </form>
       </div>

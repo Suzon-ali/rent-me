@@ -1,0 +1,99 @@
+[
+    {
+      "id": 1,
+      "segment_name": "Residential",
+      "estate_title": "Beautiful Villa with Pool",
+      "description": "A stunning villa with spacious rooms and a private pool.",
+      "price": "$500,000",
+      "status": "sale",
+      "area": "3500 sq ft",
+      "location": "City Center",
+      "facilities": ["Living Room", "Swimming Pool", "Kitchen"],
+      "image": "https://i.postimg.cc/C5kzW6vq/gallery-2.jpg"
+    },
+    {
+      "id": 2,
+      "segment_name": "Residential",
+      "estate_title": "Luxurious Apartment",
+      "description": "An elegant apartment with modern amenities and breathtaking views.",
+      "price": "$3000/month",
+      "status": "rent",
+      "area": "1500 sq ft",
+      "location": "Waterfront",
+      "facilities": ["Living Room", "Gym", "Balcony"],
+      "image": "https://i.postimg.cc/zDgbbVJG/gallery-3.jpg"
+    },
+    {
+      "id": 3,
+      "segment_name": "Residential",
+      "estate_title": "Cozy Cottage",
+      "description": "A charming cottage nestled in a serene countryside setting.",
+      "price": "$250,000",
+      "status": "sale",
+      "area": "1800 sq ft",
+      "location": "Suburbs",
+      "facilities": ["Living Room", "Fireplace", "Garden"],
+      "image": "https://i.postimg.cc/X7KrLmBM/gallery-4.jpg"
+    },
+    {
+      "id": 4,
+      "segment_name": "Residential",
+      "estate_title": "Modern Townhouse",
+      "description": "A sleek and stylish townhouse perfect for urban living.",
+      "price": "$400,000",
+      "status": "sale",
+      "area": "2200 sq ft",
+      "location": "Downtown",
+      "facilities": ["Living Room", "Terrace", "Parking"],
+      "image": "https://i.postimg.cc/hGvhSGyg/gallery-5.jpg"
+    },
+    {
+      "id": 5,
+      "segment_name": "Residential",
+      "estate_title": "Spacious Family Home",
+      "description": "A family-friendly home with ample space for gatherings and play.",
+      "price": "$2,500/month",
+      "status": "rent",
+      "area": "2800 sq ft",
+      "location": "Suburbs",
+      "facilities": ["Living Room", "Backyard", "Study"],
+      "image": "https://i.postimg.cc/rpHszL34/gallery-6.jpg"
+    },
+    {
+      "id": 6,
+      "segment_name": "Residential",
+      "estate_title": "Rustic Farmhouse Retreat",
+      "description": "Escape to this rustic farmhouse retreat surrounded by nature's beauty.",
+      "price": "$350,000",
+      "status": "sale",
+      "area": "2000 sq ft",
+      "location": "Rural Area",
+      "facilities": ["Living Room", "Farm", "Porch"],
+      "image": "https://i.postimg.cc/MpWvF51n/gallery-7.jpg"
+    },
+    {
+      "id": 7,
+      "segment_name": "Residential",
+      "estate_title": "Contemporary Loft",
+      "description": "Experience urban living at its finest in this sleek and contemporary loft.",
+      "price": "$4,000/month",
+      "status": "rent",
+      "area": "1800 sq ft",
+      "location": "City Center",
+      "facilities": ["Living Room", "Open Kitchen", "Balcony"],
+      "image": "https://i.postimg.cc/sDCBpsX9/gallery-8.jpg"
+    },
+    {
+      "id": 8,
+      "segment_name": "Residential",
+      "estate_title": "Mountain View Chalet",
+      "description": "Enjoy breathtaking mountain views from this cozy chalet.",
+      "price": "$600,000",
+      "status": "sale",
+      "area": "2500 sq ft",
+      "location": "Mountain Resort",
+      "facilities": ["Living Room", "Deck", "Ski Storage"],
+      "image": "https://i.postimg.cc/BnMX9FCM/gallery-9.jpg"
+    }
+  ]
+  

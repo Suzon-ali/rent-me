@@ -7,23 +7,32 @@ import ErrorPage from './components/ErrorPgae/ErrorPage';
 import Home from './Pages/Home';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
+import Contact from './Pages/Contact';
+import About from './Pages/About';
+import Footer from './components/Footer/Footer';
+import Gallery from './Pages/Gallery';
+import AppartMentDetails from './Pages/AppartMentDetails';
 
 function App() {
   return (
     <BrowserRouter>
     <Toaster />
-     <div className="main max-w-[1170px] mx-auto px-2">
+     <div className="main mx-auto">
        <Navbar />
-       <div className="mt-24">
+       <div>
        <Routes>
          <Route path="/" element={<Home />} />
          <Route path="/login" element={<Login />} />
-         <Route path="/Register" element={<Register />} />
+         <Route path="/register" element={<Register />} />
+         <Route path="/contact" element={<Contact />} />
+         <Route path="/about" element={<About />} />
+         <Route path="/gallery" element={<Gallery />} />
+         <Route path="/appartment/:id" element={<AppartMentDetails />} />
          
-
 
          <Route path="*" element={<ErrorPage message={"The following route is not found"} />} />
        </Routes>
+       <Footer />
        </div>
      </div>
    </BrowserRouter>
