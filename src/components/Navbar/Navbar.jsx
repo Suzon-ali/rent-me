@@ -13,7 +13,7 @@ const privateNavItems = [
     name: "Update Profile",
     url: "/update-profile",
   },
-]
+];
 
 const navitems = [
   {
@@ -24,7 +24,7 @@ const navitems = [
     name: "Gallery",
     url: "/gallery",
   },
- 
+
   {
     name: "About Us",
     url: "/about",
@@ -37,7 +37,7 @@ const navitems = [
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { user, logOut} = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
 
   console.log(user);
 
@@ -49,11 +49,11 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
-  const handleSignOut = () =>{
+  const handleSignOut = () => {
     logOut()
-    .then()
-    .catch(error => console.log(error))
-  }
+      .then()
+      .catch((error) => console.log(error));
+  };
 
   return (
     <div className=" bg-[#1c1c1c] fixed w-full top-0 left-0 py-4 px-2 font_worksans max-h-20 z-10">
@@ -123,8 +123,9 @@ const Navbar = () => {
                   </NavLink>
                 );
               })}
-              {
-                user && <>{privateNavItems &&
+            {user && (
+              <>
+                {privateNavItems &&
                   privateNavItems.length > 0 &&
                   privateNavItems.map((nav) => {
                     return (
@@ -137,14 +138,25 @@ const Navbar = () => {
                         {nav.name}
                       </NavLink>
                     );
-                  })}</>
-              }
+                  })}
+              </>
+            )}
           </ul>
         </div>
         {user ? (
-          <div className="flex items-center gap-2 tooltip tooltip-bottom " data-tip={user?.displayName}>
-            <img  className="w-10 h-10 border rounded-full cursor-pointer " src={user.phtoUrl} alt="" />{" "}
-            <div onClick={handleSignOut} className="cursor-pointer">
+          <div
+            className="flex items-center gap-2 "
+            
+          >
+            <div data-tip={user?.displayName} className="tooltip tooltip-bottom ">
+            <img
+              
+              className="w-10 h-10 border rounded-full cursor-pointer  "
+              src={user.photoURL}
+              alt=""
+            />
+            </div>
+            <div onClick={handleSignOut} className="cursor-pointer tooltip tooltip-right" data-tip="Logout">
               <svg
                 fill="none"
                 height="24"
@@ -152,7 +164,6 @@ const Navbar = () => {
                 width="24"
                 xmlns="http://www.w3.org/2000/svg"
                 className="rotate-180"
-                
               >
                 <path
                   d="M17 16L21 12M21 12L17 8M21 12L7 12M13 16V17C13 18.6569 11.6569 20 10 20H6C4.34315 20 3 18.6569 3 17V7C3 5.34315 4.34315 4 6 4H10C11.6569 4 13 5.34315 13 7V8"

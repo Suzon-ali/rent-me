@@ -1,5 +1,12 @@
+import { Helmet } from "react-helmet";
+
 function Contact() {
   return (
+   <>
+
+   <Helmet>
+    <title>Contac Us</title>
+   </Helmet>
     <div className="bg-gray-100 min-h-screen">
       <div className="container mx-auto py-12">
         <h1 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
@@ -78,6 +85,7 @@ function Contact() {
         </div>
       </div>
     </div>
+   </>
   );
 }
 

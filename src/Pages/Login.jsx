@@ -2,10 +2,12 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from '../providers/AuthProvider';
+import Loading from "../utility/Loaders/Loading";
+import { Helmet } from "react-helmet";
 
 function Login() {
 
-  const {signIn, user} = useContext(AuthContext);
+  const {signIn, user, loading, signInWithGoogle, signInWithGithub} = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
@@ -16,18 +18,47 @@ function Login() {
     const password = form.get('password');
 
     signIn(email, password)
-    .then()
+    .then(()=>{
+      navigate('/')
+    })
     .catch(error =>{
       console.log(error)
     })
 
   };
 
+  const handleGoogleSignIn = () =>{
+    signInWithGoogle()
+    .then(()=>{
+      navigate('/')
+    })
+    .catch(error=>console.log(error))
+  }
+
+  const handleGithubSignIn = () =>{
+    signInWithGithub()
+    .then(()=>{
+      navigate('/')
+    })
+    .catch(error =>  {
+      console.log(error)
+    })
+  }
+
+  if(loading){
+    return <Loading />
+  }
+
   if(user){
     navigate('/') 
   }
+  
 
   return (
+    <>
+    <Helmet>
+      <title>Login</title>
+    </Helmet>
     <div className="flex justify-center items-center h-auto pt-14 mt-24">
       <div className="w-full max-w-md bg-white p-8 rounded-lg border border-gray-300">
         <h2 className="text-2xl font-semibold text-gray-800 mb-8">Login</h2>
@@ -45,13 +76,14 @@ function Login() {
             <a href="#" className="text-indigo-500 hover:text-indigo-700">Forgot Password?</a>
           </div>
           <div className="flex justify-center items-center space-x-4">
-            <button type="button" className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 focus:outline-none focus:bg-red-600">Google</button>
-            <button type="button" className="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-900 focus:outline-none focus:bg-gray-900">GitHub</button>
+            <button onClick={handleGoogleSignIn} type="button" className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 focus:outline-none focus:bg-red-600">Google</button>
+            <button onClick={handleGithubSignIn} type="button" className="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-900 focus:outline-none focus:bg-gray-900">GitHub</button>
           </div>
           <p className="mt-4 text-center">Do not have an account? <Link to={'/register'} className="text-indigo-500 hover:text-indigo-700">Register</Link></p>
         </form>
       </div>
     </div>
+    </>
   );
 }
 

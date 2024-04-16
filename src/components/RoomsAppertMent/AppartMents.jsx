@@ -29,8 +29,6 @@ const AppartMents = () => {
       });
   }, []);
 
-  console.log(appartments)
-
 
   //decide what to render
 

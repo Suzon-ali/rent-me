@@ -15,8 +15,16 @@ import AppartMentDetails from './Pages/AppartMentDetails';
 import Profile from './Pages/Profile';
 import PrivateRoute from './PrivateRoutes/PrivateRoute';
 import UpdateProfile from './Pages/UpdateProfile';
+import { useContext } from 'react';
+import { AuthContext } from './providers/AuthProvider';
 
 function App() {
+  const {Loading} = useContext(AuthContext);
+
+  if(Loading){
+    return <Loading />
+  }
+
   return (
     <BrowserRouter>
     <Toaster />
@@ -30,7 +38,7 @@ function App() {
          <Route path="/contact" element={<Contact />} />
          <Route path="/about" element={<About />} />
          <Route path="/gallery" element={<Gallery />} />
-         <Route path="/appartment/:id" element={<AppartMentDetails />} />
+         <Route path="/appartment/:id" element={<PrivateRoute><AppartMentDetails /></PrivateRoute>} />
          
          <Route path="/profile" element={<PrivateRoute>
           <Profile />
