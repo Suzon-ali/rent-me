@@ -106,12 +106,12 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex gap-2 text-nowrap">
-          <button className="bg-success  px-4 py-2 rounded-lg text-white">
-            Sign In
-          </button>
-          <button className="bg-info hidden md:block px-4 py-2 rounded-lg text-white">
-            Sign Up
-          </button>
+          <NavLink to={'/login'} className="bg-success  px-4 py-2 rounded-lg text-white">
+           Login
+          </NavLink>
+          <NavLink to={'/register'} className="bg-info hidden md:block px-4 py-2 rounded-lg text-white">
+            Register
+          </NavLink>
         </div>
       </div>
     </div>
