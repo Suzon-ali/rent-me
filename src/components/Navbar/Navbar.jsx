@@ -1,7 +1,8 @@
-import {  useState } from "react";
+import {  useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import logo from '../../assets/logo.png'
+import { AuthContext } from '../../providers/AuthProvider';
 
 const navitems = [
   {
@@ -13,17 +14,28 @@ const navitems = [
     url: "/gallery",
   },
   {
+    name: "User Profile",
+    url: "/profile",
+  },
+  {
+    name: "Update Profile",
+    url: "/update-profile",
+  },
+  {
     name: "About Us",
     url: "/about",
   },
   {
     name: "Contact",
     url: "/contact",
-  },
+  }
 ];
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const {user} = useContext(AuthContext);
+
+  console.log(user)
 
   const handelMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -93,7 +105,7 @@ const Navbar = () => {
                   <NavLink
                     onClick={handleMenuClose}
                     key={nav.name}
-                    className="p-2 rounded-lg hover:outline outline-1 hover:outline-success"
+                    className="p-2 rounded-sm hover:outline outline-1 hover:outline-success"
                     to={nav.url}
                   >
                     {nav.name}
@@ -102,14 +114,14 @@ const Navbar = () => {
               })}
           </ul>
         </div>
-        <div className="flex gap-2 text-nowrap">
-          <NavLink to={'/login'} className="bg-success  px-4 py-2 rounded-lg text-white">
+        {user? <div>{user.email}</div> : <div className="flex gap-2 text-nowrap">
+          <NavLink to={'/login'} className="bg-success  px-4 py-2 rounded-sm text-white">
            Login
           </NavLink>
-          <NavLink to={'/register'} className="bg-info hidden md:block px-4 py-2 rounded-lg text-white">
+          <NavLink to={'/register'} className="bg-info hidden md:block px-4 py-2 rounded-sm text-white">
             Register
           </NavLink>
-        </div>
+        </div> }
       </div>
     </div>
   );

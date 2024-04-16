@@ -6,7 +6,7 @@ import './ErrorPage.css'
 const ErrorPage = ({message}) => {
   return (
     <section className="page_404 mt-20">
-      <div className="container">
+      <div className="container mx-auto ">
         <div className="row">
           <div className="col-sm-12 ">
             <div className="col-sm-10 col-sm-offset-1  text-center">
