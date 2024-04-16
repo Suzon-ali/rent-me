@@ -1,9 +1,10 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from '../providers/AuthProvider';
 
 function Register() {
-  const {createUser} = useContext(AuthContext);
+  const {createUser, user} = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -26,6 +27,10 @@ function Register() {
 
 
   };
+
+  if(user){
+    navigate('/') 
+  }
 
   return (
     <div className="flex justify-center items-center h-auto pt-10 mt-24">

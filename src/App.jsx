@@ -12,6 +12,9 @@ import About from './Pages/About';
 import Footer from './components/Footer/Footer';
 import Gallery from './Pages/Gallery';
 import AppartMentDetails from './Pages/AppartMentDetails';
+import Profile from './Pages/Profile';
+import PrivateRoute from './PrivateRoutes/PrivateRoute';
+import UpdateProfile from './Pages/UpdateProfile';
 
 function App() {
   return (
@@ -28,6 +31,11 @@ function App() {
          <Route path="/about" element={<About />} />
          <Route path="/gallery" element={<Gallery />} />
          <Route path="/appartment/:id" element={<AppartMentDetails />} />
+         
+         <Route path="/profile" element={<PrivateRoute>
+          <Profile />
+         </PrivateRoute>} />
+         <Route path="/update-profile" element={<PrivateRoute><UpdateProfile /></PrivateRoute>} />
          
 
          <Route path="*" element={<ErrorPage message={"The following route is not found"} />} />

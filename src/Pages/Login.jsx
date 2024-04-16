@@ -1,11 +1,12 @@
 
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from '../providers/AuthProvider';
 
 function Login() {
 
-  const {signIn, setUser} = useContext(AuthContext);
+  const {signIn, user} = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -15,14 +16,16 @@ function Login() {
     const password = form.get('password');
 
     signIn(email, password)
-    .then(result => {
-      setUser(result.user)
-    })
+    .then()
     .catch(error =>{
       console.log(error)
     })
 
   };
+
+  if(user){
+    navigate('/') 
+  }
 
   return (
     <div className="flex justify-center items-center h-auto pt-14 mt-24">
