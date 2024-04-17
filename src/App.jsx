@@ -22,6 +22,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
 import BlogDetails from './Pages/BlogDetails';
+import Membership from './Pages/Membership';
 
 function App() {
   const {Loading} = useContext(AuthContext);
@@ -58,6 +59,7 @@ function App() {
           <Profile />
          </PrivateRoute>} />
          <Route path="/update-profile" element={<PrivateRoute><UpdateProfile /></PrivateRoute>} />
+         <Route path="/membership" element={<PrivateRoute><Membership /></PrivateRoute>} />
          
 
          <Route path="*" element={<ErrorPage message={"The following route is not found"} />} />

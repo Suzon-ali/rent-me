@@ -7,7 +7,6 @@ const BlogDetails = () => {
   const { id } = useParams();
   const blog = blogData.find(blog => blog.id === parseInt(id));
 
-  console.log(blog)
 
   return (
     <div className="container mx-auto mt-24">

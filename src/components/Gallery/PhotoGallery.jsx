@@ -28,7 +28,6 @@ const PhotoGallery = () => {
       });
   }, []);
 
-  console.log(appartments)
 
 
   //decide what to render
@@ -66,7 +65,7 @@ const PhotoGallery = () => {
 
   return (
     <div className="max-w-[1170px] mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
         {content}
       </div>
     </div>

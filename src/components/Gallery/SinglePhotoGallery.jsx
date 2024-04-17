@@ -3,8 +3,8 @@
 
 const SinglePhotoGallery = ({appartment}) => {
   return (
-    <div>
-      <img data-aos="zoom-in" src={appartment?.image} alt="" />
+    <div  className="px-2 md:px-3" >
+      <img className="w-full" data-aos="zoom-in" src={appartment?.image} alt="" />
     </div>
   )
 }

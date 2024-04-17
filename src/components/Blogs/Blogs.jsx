@@ -30,7 +30,6 @@ const Blogs = () => {
       });
   }, []);
 
-  console.log(blogs)
 
 
   //decide what to render

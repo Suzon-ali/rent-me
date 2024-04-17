@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 import { Helmet } from 'react-helmet';
 import { updateProfile } from 'firebase/auth';
+import toast from 'react-hot-toast';
 
 function UpdateProfile() {
   const { user, setLoading } = useContext(AuthContext);
@@ -25,7 +26,7 @@ function UpdateProfile() {
         setLoading(false);
       })
       .catch((error) => {
-        console.log('Error updating profile:', error);
+        toast.error(error.message);
       });
   };
 

@@ -25,6 +25,10 @@ const navitems = [
     name: "Gallery",
     url: "/gallery",
   },
+  {
+    name: "Membership",
+    url: "/membership",
+  },
 
   {
     name: "About Us",
