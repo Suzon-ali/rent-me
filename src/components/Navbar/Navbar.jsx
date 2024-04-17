@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
 import { AuthContext } from "../../providers/AuthProvider";
+import toast from "react-hot-toast";
 
 const privateNavItems = [
   {
@@ -39,7 +40,6 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { user, logOut } = useContext(AuthContext);
 
-  console.log(user);
 
   const handelMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -51,8 +51,12 @@ const Navbar = () => {
 
   const handleSignOut = () => {
     logOut()
-      .then()
-      .catch((error) => console.log(error));
+      .then(()=>{
+        toast.success("Logged Out");
+      })
+      .catch((error) => {
+        toast.success(error.message);
+      });
   };
 
   return (

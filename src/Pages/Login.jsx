@@ -1,14 +1,15 @@
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from '../providers/AuthProvider';
-import Loading from "../utility/Loaders/Loading";
 import { Helmet } from "react-helmet";
+import toast from "react-hot-toast";
 
 function Login() {
 
-  const {signIn, user, loading, signInWithGoogle, signInWithGithub} = useContext(AuthContext);
+  const {signIn, signInWithGoogle, signInWithGithub} = useContext(AuthContext);
   const navigate = useNavigate();
+  const [lodingError, setLoginError] = useState('');
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -19,10 +20,11 @@ function Login() {
 
     signIn(email, password)
     .then(()=>{
-      navigate('/')
+      navigate('/');
+      toast.success("Logged in succesfully!");
     })
     .catch(error =>{
-      console.log(error)
+      setLoginError(error.message)
     })
 
   };
@@ -30,29 +32,23 @@ function Login() {
   const handleGoogleSignIn = () =>{
     signInWithGoogle()
     .then(()=>{
-      navigate('/')
+      navigate('/');
+      toast.success("Logged in succesfully!")
     })
-    .catch(error=>console.log(error))
+    .catch(error=>setLoginError(error.message))
   }
 
   const handleGithubSignIn = () =>{
     signInWithGithub()
     .then(()=>{
-      navigate('/')
+      navigate('/');
+      toast.success("Logged in succesfully!")
     })
     .catch(error =>  {
-      console.log(error)
+      setLoginError(error.message)
     })
   }
 
-  if(loading){
-    return <Loading />
-  }
-
-  if(user){
-    navigate('/') 
-  }
-  
 
   return (
     <>
@@ -75,6 +71,7 @@ function Login() {
             <button type="submit" className="bg-success/80 text-white px-4 py-2 rounded-md hover:bg-success focus:outline-none focus:bg-success">Login</button>
             <a href="#" className="text-indigo-500 hover:text-indigo-700">Forgot Password?</a>
           </div>
+          {lodingError && <p>{lodingError}</p>}
           <div className="flex justify-center items-center space-x-4">
             <button onClick={handleGoogleSignIn} type="button" className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 focus:outline-none focus:bg-red-600">Google</button>
             <button onClick={handleGithubSignIn} type="button" className="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-900 focus:outline-none focus:bg-gray-900">GitHub</button>
