@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 import toast from "react-hot-toast";
 
 function Register() {
-  const { createUser, user } = useContext(AuthContext);
+  const { createUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const [passwordError, setPasswordError] = useState("");
@@ -20,8 +20,10 @@ function Register() {
     const name = form.get("name");
     const password = form.get("password");
     const photoUrl = form.get("photoUrl");
+    
 
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
     if (!passwordRegex.test(password)) {
       setPasswordError(
         "Password must contain at least 6 characters, including one uppercase letter and one lowercase letter."
