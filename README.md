@@ -4,7 +4,7 @@
 RealEstateHub is a comprehensive platform designed to assist users in various aspects of real estate, including homebuying, selling, investing, and staying updated on industry trends. Whether you're a first-time homebuyer, seasoned investor, or homeowner looking to sell, RealEstateHub provides valuable resources and insights to guide you through every step of the process.
 
 ### Live Site URL
-[RealEstateHub Live](https://www.realestatehub.com)
+[RentMe](https://rentme-assignment9.netlify.app/)
 
 ## Features and Characteristics
 - **Homebuying Tips:** Access a curated list of top 10 tips for first-time homebuyers to navigate the homebuying process smoothly.
