@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "title": "Top 10 Tips for First-Time Homebuyers",
+      "author": "Jane Doe",
+      "date": "2024-04-10",
+      "content": "Are you considering buying your first home? Here are ten essential tips to help you navigate the homebuying process smoothly.",
+      "image": "https://i.postimg.cc/sxzjXcC4/istockphoto-682432560-612x612.jpg",
+      "tags": ["homebuying", "tips"]
+    },
+    {
+      "id": 2,
+      "title": "The Benefits of Investing in Rental Properties",
+      "author": "John Smith",
+      "date": "2024-03-25",
+      "content": "Thinking about real estate investment? Discover the advantages of investing in rental properties and how it can diversify your portfolio.",
+      "image": "https://i.postimg.cc/Qx08814c/istockphoto-157193895-612x612.jpg",
+      "tags": ["investment", "rental properties"]
+    },
+    {
+      "id": 3,
+      "title": "How to Stage Your Home for a Quick Sale",
+      "author": "Emily Johnson",
+      "date": "2024-03-05",
+      "content": "Planning to sell your home? Learn effective home staging techniques to attract potential buyers and secure a quick sale.",
+      "image": "https://i.postimg.cc/KYdvXb9V/images.jpg",
+      "tags": ["home staging", "selling"]
+    },
+    {
+      "id": 4,
+      "title": "The Latest Trends in Luxury Real Estate",
+      "author": "Michael Williams",
+      "date": "2024-02-20",
+      "content": "Interested in luxury real estate? Stay updated on the latest trends in high-end properties and luxury lifestyles.",
+      "image": "https://i.postimg.cc/TYR2vC9R/218052644.jpg",
+      "tags": ["luxury", "trends"]
+    },
+    {
+      "id": 5,
+      "title": "Understanding the Home Appraisal Process",
+      "author": "David Brown",
+      "date": "2024-01-15",
+      "content": "Preparing for a home appraisal? Gain insights into the appraisal process and ensure your property is accurately evaluated.",
+      "image": "https://i.postimg.cc/FHHK3DdP/21759e36688ba0f43fc0796ca627e979.jpg",
+      "tags": ["appraisal", "process"]
+    }
+  ]
+  
+
+  
+
+
+

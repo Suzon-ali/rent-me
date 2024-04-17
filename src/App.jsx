@@ -18,8 +18,21 @@ import UpdateProfile from './Pages/UpdateProfile';
 import { useContext } from 'react';
 import { AuthContext } from './providers/AuthProvider';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+import BlogDetails from './Pages/BlogDetails';
+
 function App() {
   const {Loading} = useContext(AuthContext);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: false
+    });
+  }, []);
 
   if(Loading){
     return <Loading />
@@ -38,6 +51,7 @@ function App() {
          <Route path="/contact" element={<Contact />} />
          <Route path="/about" element={<About />} />
          <Route path="/gallery" element={<Gallery />} />
+         <Route path="/blog/:id" element={<BlogDetails />} />
          <Route path="/appartment/:id" element={<PrivateRoute><AppartMentDetails /></PrivateRoute>} />
          
          <Route path="/profile" element={<PrivateRoute>

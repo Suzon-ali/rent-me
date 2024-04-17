@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -22,19 +23,19 @@ function Footer() {
             <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
             <ul className="flex flex-col space-y-2">
               <li>
-                <a href="#" className="hover:text-gray-200">About Us</a>
+                <Link to="/about" className="hover:text-gray-200">About Us</Link>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-200">Contact Us</a>
+                <Link to="contact" className="hover:text-gray-200">Contact Us</Link>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-200">Privacy Policy</a>
+                <Link to="/" className="hover:text-gray-200">Privacy Policy</Link>
               </li>
             </ul>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-2">Contact Info</h3>
-            <p className="text-gray-400">123 Maple Avenue<br />Cityville, State 12345<br />Phone: (123) 456-7890<br />Email: contact@example.com</p>
+            <p className="text-gray-400">123 Maple Avenue<br />Cityville, State 12345<br />Phone: (123) 456-7890<br />Email: contact@rentme.com</p>
           </div>
         </div>
         <hr className="my-8 border-gray-700" />

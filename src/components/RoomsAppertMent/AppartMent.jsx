@@ -2,9 +2,12 @@
 
 import { Link } from "react-router-dom";
 
+
 function AppartMent({ appartment }) {
+
+
   return (
-    <div className="rounded-xl">
+    <div data-aos="zoom-in" className="rounded-xl">
       <div className="max-w-sm mx-auto bg-white rounded-lg overflow-hidden border border-gray-300">
         <img src={appartment.image} alt={appartment.appartment_title} className="w-full h-60 rounded-t-lg" />
         <div className="p-4">

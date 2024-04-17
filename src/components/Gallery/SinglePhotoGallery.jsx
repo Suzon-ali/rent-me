@@ -4,7 +4,7 @@
 const SinglePhotoGallery = ({appartment}) => {
   return (
     <div>
-      <img src={appartment?.image} alt="" />
+      <img data-aos="zoom-in" src={appartment?.image} alt="" />
     </div>
   )
 }
