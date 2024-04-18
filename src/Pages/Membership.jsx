@@ -1,5 +1,13 @@
+import { Helmet } from "react-helmet";
+
 const Membership = () => {
     return (
+      <>
+      
+      <Helmet>
+        <title>Membership</title>
+      </Helmet>
+
       <div className="bg-gray-100 min-h-screen py-12 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-semibold text-center mb-8">Join Our Community</h2>
@@ -61,6 +69,7 @@ const Membership = () => {
           </div>
         </div>
       </div>
+      </>
     );
   };
   
